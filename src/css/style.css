@@ -211,7 +211,7 @@ footer{
 .footer-wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .footer-wrapper .footer-item{
@@ -247,7 +247,11 @@ footer{
 /* --------------- footer end ---------------*/
 
 
-
+@media screen and (min-width:700px) {
+    .footer-wrapper{
+        justify-content: space-evenly;
+    }
+}
 
 @media screen and (max-width: 900px) {
     .mobile-nav-toggle {
