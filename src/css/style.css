@@ -378,4 +378,8 @@ footer{
         border-top: 1px solid #fff;
         padding-top: 5px;
     }
+
+    .header-right{
+        top: 94px;
+    }
 }
