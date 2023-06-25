@@ -176,6 +176,7 @@ header .header-left .logo {
 .main-list-item div h4 {
     font-size: 1.5rem;
 }
+
 .main-list-item div p {
     font-size: 1.2rem;
 }
@@ -191,7 +192,7 @@ header .header-left .logo {
 
 /* --------------- footer start ---------------*/
 
-footer{
+footer {
     width: 100%;
     background: #000;
     color: #fff;
@@ -200,7 +201,7 @@ footer{
     position: relative;
 }
 
-.footer-iner{
+.footer-iner {
     position: relative;
     min-height: 20vh;
     display: flex;
@@ -208,47 +209,52 @@ footer{
     flex-direction: column;
 }
 
-.footer-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.footer-wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.footer-wrapper .footer-item{
+.footer-wrapper .footer-item {
     padding: 1rem;
 }
 
-.footer-cr{
+.footer-cr {
     align-self: flex-end;
 }
-.footer-cr .footer-cr-logo{
+
+.footer-cr .footer-cr-logo {
     width: 7rem;
 }
 
-.footer-wrapper .footer-item{
+.footer-wrapper .footer-item {
     display: flex;
     flex-direction: column;
 }
-.footer-wrapper .footer-item h4{
+
+.footer-wrapper .footer-item h4 {
     margin: 1rem 0;
 }
-.footer-wrapper .footer-item a{
+
+.footer-wrapper .footer-item a {
     text-decoration: none;
     color: var(--colorPrimary);
 }
-.footer-wrapper .footer-item a:hover{
+
+.footer-wrapper .footer-item a:hover {
     text-decoration: underline;
     color: var(--colorSecondary);
 }
 
-.footer-item .footer-item{
+.footer-item .footer-item {
     padding: 0;
 }
+
 /* --------------- footer end ---------------*/
 
 
 @media screen and (min-width:700px) {
-    .footer-wrapper{
+    .footer-wrapper {
         justify-content: space-evenly;
     }
 }
@@ -343,6 +349,10 @@ footer{
     .main-list-item .icon-container img {
         max-height: 4rem;
     }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -379,7 +389,29 @@ footer{
         padding-top: 5px;
     }
 
-    .header-right{
+    .header-right {
         top: 94px;
     }
+}
+
+@media screen and (max-width:350px) {
+    main .container {
+        margin: 0 auto;
+    }
+
+    .main-list-item .info-container{
+        padding: 0 0.5rem;
+    }
+    .main-list-item .info-container h4{
+        font-size: 1.2rem;
+    }
+    .main-list-item .icon-container img{
+        max-height: 3rem;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+
 }
